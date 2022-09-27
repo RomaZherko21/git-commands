@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Yellowtail&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="main">
+        <h1 class="main__title">
+            GIT commands
+        </h1>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">First commit on a new branch</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git checkout -b 'branchName'</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git add .</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git commit -m 'commit message'</h3>
+                <div class="description">change previous commit</div>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git push</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git push --set-upstream origin 'branchName'</h3>
+            </div>
+        </section>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Change previous commit</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git checkout 'branchName'</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git add .</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git commit --amend</h3>
+                <div class="description">change previous commit</div>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git push -f</h3>
+            </div>
+        </section>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Rebase any commits in one</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git rebase -i HEAD~num</h3>
+                <div class="description">num - is any commits number you want to rebase in one commit</div>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">in console -> press i -> first commit 'pick', next onse 'squash' -> ESC :wq</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">in console -> press i -> delete first commits messages -> ESC :wq</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git push</h3>
+            </div>
+
+
+        </section>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Rebase branch on recent master without conflicts</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git checkout master</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git pull</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git checkout 'branchName'</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git rebase master</h3>
+            </div>
+        </section>
+
+
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Rebase branch on recent master with conflicts</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git checkout master</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git pull</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git checkout 'branchName'</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git rebase master</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">Reslove conflicts</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git add .</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git rebase --continue</h3>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git push -f</h3>
+            </div>
+        </section>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Stash</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git stash</h3>
+                <div class="description">Stash all changes. Do it on branch, f.e. 'branchName'.</div>
+            </div>
+            <div class="command-wrapper">
+                <h3 class="command">git stash pop</h3>
+                <div class="description">Apply all stashed changes. Do it on branch 'branchName'.</div>
+            </div>
+        </section>
+
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Branch</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git checkout -b 'branchName'</h3>
+                <div class="description">Create new branch and checkout on it</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git checkout 'branchName or commitHash'</h3>
+                <div class="description">Checkout on branch or hash, f.e. 'git checkout '01fer3'</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git branch</h3>
+                <div class="description">Show all local branches</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git branch -d 'branchName'</h3>
+                <div class="description">Soft delete local branch</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git push origin --delete 'branchName'</h3>
+                <div class="description">Delete remote branch</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git branch -m 'oldBranchName' 'newBranchName'</h3>
+                <div class="description">Rename old branch</div>
+            </div>
+
+        </section>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Logs</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git status</h3>
+                <div class="description">Show files status of repository</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git log --oneline</h3>
+                <div class="description">Show all commits</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git reflog</h3>
+                <div class="description">Show all refs (checkout, rebase, merge, pull ...) actions</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git log master..branchName --oneline</h3>
+                <div class="description">Show all commits of only branchName</div>
+            </div>
+
+
+        </section>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Reset changes</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git checkout -f HEAD</h3>
+                <div class="description">Remove all uncommited changes on branch, <b>delete all changes</b></div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git reset HEAD~num</h3>
+                <div class="description">Decline num of commits,move to previous commit , BUT with not indexed changes
+                    of the current commit</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git commit --amend</h3>
+                <div class="description">change previous commit</div>
+            </div>
+
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
