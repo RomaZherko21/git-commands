@@ -18,6 +18,7 @@ body {
     font-weight: 400;
     letter-spacing: 0.36px;
     color: black;
+
 }
 
 .main {
@@ -25,6 +26,7 @@ body {
     min-height: 100vh;
     padding: 20px;
 
+    box-shadow: 0 0 10px rgb(0, 0, 0);
     border-radius: 20px;
     background-color: rgb(200, 197, 197);
 }
@@ -34,6 +36,9 @@ body {
     margin: 0 auto;
 }
 
+.commands-list__title {
+    text-align: center;
+}
 
 .command-wrapper {
     display: flex;
@@ -50,7 +55,17 @@ body {
     background-color: rgb(174, 172, 172);
 }
 
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
 
-.commands-list__title {
-    text-align: center;
+.img-wrapper>img {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 10%;
 }

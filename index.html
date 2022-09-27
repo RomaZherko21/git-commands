@@ -221,6 +221,82 @@
                 <div class="description">change previous commit</div>
             </div>
 
+            <div class="command-wrapper">
+                <h3 class="command">git checkout 'branchName or commitHash' fileName</h3>
+                <div class="description">Change file (fileName) on current branch, according to branch or hash, f.e. git
+                    checkout master index.js</div>
+            </div>
+
+
+        </section>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Coppy commits</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git cherry-pick 'branchName or commitHash'</h3>
+                <div class="description">On another branch, create new commit, copy commit changes into current branch
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git cherry-pick 'master..branchName'</h3>
+                <div class="description">On another branch, create any new commit, copy ANY commits changes into current
+                    branch
+                </div>
+                <div class="img-wrapper">
+                    <img src="./img/cherry-pick1.png" alt="">
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git cherry-pick --abort</h3>
+                <div class="description">Cancel cherry-pick
+                </div>
+            </div>
+
+        </section>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Merge</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git merge 'branchName'</h3>
+                <div class="description">On another branch, f.e. master. Create new commit on master -> all changes of
+                    master + all changes of branchName</div>
+            </div>
+
+            <div class="img-wrapper">
+                <img src="./img/merge/merge1.png" alt="">
+                <div class="description">Merge 2 branches into new one commit on master branch (HEAD)</div>
+            </div>
+            <div class="img-wrapper">
+                <div class="description">Git check changes of base-feature and base-master commits, if there is no
+                    conflicts in files -> add . If there are conflicts -> need resolve conflicts </div>
+                <img src="./img/merge/merge2.png" alt="">
+            </div>
+            <div class="img-wrapper">
+                <img src="./img/merge/merge-conflicts.png" alt="">
+                <div class="description">Merge 2 branches with conflicts on line4, but no conflicts on line 1-2</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git merge --abort</h3>
+                <div class="description">Cancel merge (before branches were successfuly merged). Everything will be as
+                    before</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git add .</h3>
+                <h3 class="command">git commit -m 'message'</h3>
+                <div class="description">After successful merging with resolving conflicts</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git reset --hard HEAD~1</h3>
+                <div class="description">After successful merging with resolving conflicts, if we want to cancel merge
+                </div>
+            </div>
 
         </section>
 
