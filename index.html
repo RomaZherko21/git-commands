@@ -60,7 +60,7 @@
         </section>
 
         <section class="commands-list">
-            <h2 class="commands-list__title">Rebase any commits in one</h2>
+            <h2 class="commands-list__title">Squash any commits in one</h2>
 
             <div class="command-wrapper">
                 <h3 class="command">git rebase -i HEAD~num</h3>
@@ -80,7 +80,7 @@
         </section>
 
         <section class="commands-list">
-            <h2 class="commands-list__title">Rebase branch on recent master without conflicts</h2>
+            <h2 class="commands-list__title">Rebase branch on master without conflicts</h2>
 
             <div class="command-wrapper">
                 <h3 class="command">git checkout master</h3>
@@ -99,7 +99,7 @@
 
 
         <section class="commands-list">
-            <h2 class="commands-list__title">Rebase branch on recent master with conflicts</h2>
+            <h2 class="commands-list__title">Rebase branch on master with conflicts</h2>
 
             <div class="command-wrapper">
                 <h3 class="command">git checkout master</h3>
@@ -109,6 +109,7 @@
             </div>
             <div class="command-wrapper">
                 <h3 class="command">git checkout 'branchName'</h3>
+                <div class="description">it's better to squash all commits on this branch before rebase</div>
             </div>
             <div class="command-wrapper">
                 <h3 class="command">git rebase master</h3>
@@ -294,10 +295,61 @@
 
             <div class="command-wrapper">
                 <h3 class="command">git reset --hard HEAD~1</h3>
-                <div class="description">After successful merging with resolving conflicts, if we want to cancel merge
+                <div class="description">If we want to cancel successful merge
                 </div>
             </div>
 
+        </section>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Rebase</h2>
+
+            <div class="command-wrapper">
+                <h3 class="command">git rebase master</h3>
+                <div class="description">Rebase current 'branchName' on master</div>
+            </div>
+
+            <div class="img-wrapper">
+                <img src="./img/rebase/rebase1.png" alt="">
+                <img src="./img/rebase/rebase2.png" alt="">
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git rebase --abort</h3>
+                <div class="description">Cancel rebase, before commiting</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git rebase --continue</h3>
+                <div class="description">Continue rebase one commit if there is no conflicts</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git rebase --onto master feature</h3>
+                <div class="description">Rebase 2 commits from unwnted branch feature</div>
+                <div class="img-wrapper">
+                    <img src="./img/rebase/rebase3.png" alt="">
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git rebase -i HEAD~num</h3>
+                <div class="description">num - is any commits number you want to rebase in one commit</div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git rebase --edit-todo</h3>
+                <div class="description">Edit interactive rebase config</div>
+            </div>
+
+        </section>
+
+        <section class="commands-list">
+            <h2 class="commands-list__title">Merge vs Rebase</h2>
+
+            <div class="img-wrapper">
+                <img src="./img/merge-rebase.png" style="width:1000px; height: 600px; border-radius: 20px;" alt="">
+            </div>
         </section>
 
     </main>

@@ -36,8 +36,17 @@ body {
     margin: 0 auto;
 }
 
+.commands-list {
+    margin-top: 50px;
+    padding: 20px;
+
+    border: 3px solid rgb(154, 152, 152);
+    border-radius: 20px;
+}
+
 .commands-list__title {
     text-align: center;
+
 }
 
 .command-wrapper {
