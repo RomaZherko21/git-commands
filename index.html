@@ -352,6 +352,88 @@
             </div>
         </section>
 
+        <section class="commands-list">
+            <h2 class="commands-list__title">Remote repo</h2>
+
+
+
+            <div class="command-wrapper">
+                <h3 class="command">git clone 'httpsRepoUrl or sshRepoUrl'</h3>
+                <div class="description">Copy remote repo into current directory
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">origin</h3>
+                <div class="description">In Git, "origin" is a shorthand name for the remote repository that a project
+                    was originally cloned from. More precisely, it is used instead of that original repository's URL -
+                    and thereby makes referencing much easier. (f.e. 'https://github.com/RomaZherko21/git-commands.git'
+                    may be 'origin')
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">origin/master</h3>
+                <div class="description">Is a master branch in remote git repo. (f.e.
+                    'https://github.com/RomaZherko21/git-commands.git/master')
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git remote add origin 'remoteRepoUrl'</h3>
+                <div class="description">Sync your local repo and remote repo, according to remoteRepoUrl (f.e.
+                    'https://github.com/RomaZherko21/git-commands.git/master'), and name remoteRepoUrl as origin.
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git push</h3>
+                <div class="description">Upload local repository content to a remote repository
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git pull</h3>
+                <div class="description">git pull = git fetch + git merge. Command is used to fetch and download content
+                    from a remote repository and immediately update the local repository to match that content
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git remote -v</h3>
+                <div class="description">Shows remote repos
+                </div>
+
+                <div class="img-wrapper">
+                    <img src="./img/remote/remote.jpg" style="width: 600px; height:100px; border-radius: 20px;" alt="">
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git fetch</h3>
+                <div class="description">Command used to download contents from a remote repository. But without
+                    merging.
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git fetch origin 'remoteBranch':'localBranch'</h3>
+                <h3 class="command">git checkout 'localBranch'</h3>
+                <div class="description">Checkout on new remote branch which you dont have on local repo (f.e. git fetch
+                    origin Fix-4:Fix-4)
+                </div>
+            </div>
+
+            <div class="command-wrapper">
+                <h3 class="command">git pull origin 'remoteBranch'</h3>
+                <div class="description">Pull latest changes from remoteBranch
+                </div>
+            </div>
+
+
+
+        </section>
+
     </main>
 
 </body>
